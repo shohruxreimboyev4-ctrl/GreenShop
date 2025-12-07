@@ -15,8 +15,8 @@ const Header = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
-        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <header className="fixed top-0 left-0 right-0 bg-white z-50">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 border-b border-green-300">
           <div className="flex items-center justify-between h-16 sm:h-20">
             <Link to="/" className="flex items-center space-x-2 shrink-0">
               <img src={Logo} alt="GreenShop" />
@@ -28,7 +28,7 @@ const Header = () => {
                   key={link.path}
                   to={link.path}
                   className={({ isActive }) =>
-                    `text-base font-medium relative group ${
+                    `text-base font-medium ${
                       isActive
                         ? "text-green-600"
                         : "text-gray-700 hover:text-green-600"
@@ -36,7 +36,6 @@ const Header = () => {
                   }
                 >
                   {link.name}
-                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full"></span>
                 </NavLink>
               ))}
             </nav>
@@ -60,7 +59,7 @@ const Header = () => {
                 <FiShoppingCart className="w-5 h-5 sm:w-6 sm:h-6" />
               </NavLink>
 
-              <button className="hidden sm:flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm font-medium">
+              <button className="hidden sm:flex items-center bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 text-sm font-medium cursor-pointer">
                 Login
               </button>
 
@@ -129,7 +128,7 @@ const Header = () => {
           </nav>
 
           <div className="p-4 border-t">
-            <button className="w-full bg-green-600 text-white px-4 py-2 rounded">
+            <button className="w-full bg-green-600 text-white px-4 py-2 rounded cursor-pointer">
               Login
             </button>
           </div>

@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+/* Small tweaks for very small screens <= 300px */
+@media (max-width: 300px) {
+	header .text-lg { font-size: 14px; }
+	header img { width: 28px; height: 28px; }
+	.w-5.h-5 { width: 16px; height: 16px; }
+	.w-6.h-6 { width: 18px; height: 18px; }
+	.w-8.h-8 { width: 28px; height: 28px; }
+}
+
+/* smooth badge scaling */
+.badge-scale {
+	transition: transform .18s ease-in-out;
+}
+.badge-scale:active { transform: scale(0.95); }
